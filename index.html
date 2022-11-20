@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./index.js">    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-2">Котики</h1>
+        <div class="d-flex justify-content-center mb-5">
+            <button data-open_modal data-action="add" class="btn btn-success">Еще один котик?</a>
+        </div>
+        <div data-wr class="d-flex justify-content-center"></div>
+    </div>
+
+
+    <div data-modals_wr class="modal-wr hidden">
+        <div data-addmodal_wr class="add-modal hidden">
+            <form name="add_cat">
+                <div class="mb-3">
+                    <label class="form-label">Данные нового котика:</label>
+                </div>
+                <div class="mb-3">
+                    <input placeholder="ID котика" name="id" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="Имя котика" name="name" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="Возраст котика" name="age" type="number" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="Рейтинг котика" name="rate" type="number" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input placeholder="Подробнее о котике" name="description" type="text" class="form-control">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="favourite" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Фаворит?</label>
+                </div>
+                <div class="mb-3">
+                    <input placeholder="Ссылка на фото" name="img_link" type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="button" data-action="cancelAdd" class="btn btn-primary">Отмена</button>
+            </form>
+        </div>
+        <div data-showmodal_wr class="add-modal">
+        </div>
+    </div>
+</body>
+
+</html>

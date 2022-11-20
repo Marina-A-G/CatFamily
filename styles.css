@@ -1,0 +1,33 @@
+.modal-wr {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 9;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-modal {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.show-modal {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+
+.hidden {
+    display: none;
+}
