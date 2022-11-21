@@ -24,6 +24,17 @@ class APIkotiki {
         }
     }
 
+    /*
+    async getAllCatsID() {
+        try {
+            const response = await fetch(`${this.baseUrl}ids`)
+            //const data = await response.json()
+            return response.json()
+        } catch (error) {
+            throw new Error(error)
+        }
+    }*/
+
     async getOneCat(catId) {
         try {
             const response = await fetch(`${this.baseUrl}show/${catId}`)

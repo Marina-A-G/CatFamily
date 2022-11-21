@@ -50,11 +50,16 @@
                 <div class="mb-3">
                     <input placeholder="Ссылка на фото" name="img_link" type="text" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-primary">Добавить</button>
-                <button type="button" data-action="cancelAdd" class="btn btn-primary">Отмена</button>
+                <button type="submit" data-action="submitAdd" class="btn btn-danger">Добавить</button>
+                <!-- <button type="button" data-action="cancelAdd" class="btn btn-primary">Отмена</button>-->
+                <div class="mb-3">
+                    <label class="form-label">Для отмены добавления и закрытия окна обновите страницу. <br>Ну да, пока
+                        вот
+                        так...</label>
+                </div>
             </form>
         </div>
-        <div data-showmodal_wr class="add-modal">
+        <div data-showmodal_wr class="add-modal hidden">
         </div>
     </div>
 </body>
