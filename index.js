@@ -24,7 +24,7 @@ class APIkotiki {
         }
     }
 
-    /*
+
     async getAllCatsID() {
         try {
             const response = await fetch(`${this.baseUrl}ids`)
@@ -33,7 +33,7 @@ class APIkotiki {
         } catch (error) {
             throw new Error(error)
         }
-    }*/
+    }
 
     async getOneCat(catId) {
         try {
@@ -226,14 +226,21 @@ document.forms.add_cat.addEventListener('submit', (event) => {
     newCatData.rate = +newCatData.rate
     newCatData.favourite = newCatData.favourite == 'on'
 
-    api1.addCat(newCatData).then(() => {
+    api1.getAllCatsID().then((responseIds) => {
+        console.log(responseIds.data)
+        if (responseIds.data.indexOf(newCatData.id) != -1)
+            alert("Кот с таким ID уже есть в базе")
+        else {
+            api1.addCat(newCatData).then(() => {
 
-        $wr.insertAdjacentHTML('beforeend', generateHTMLTemplateForCat(newCatData))
-        $modalsWr.classList.add('hidden')
-        $addModalWr.classList.add('hidden')
-        event.target.reset()
-    }
-    ).catch(alert)
+                $wr.insertAdjacentHTML('beforeend', generateHTMLTemplateForCat(newCatData))
+                $modalsWr.classList.add('hidden')
+                $addModalWr.classList.add('hidden')
+                event.target.reset()
+            }
+            ).catch(alert)
+        }
+    })
 
 })
 
